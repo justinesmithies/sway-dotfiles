@@ -1,0 +1,89 @@
+configuration {
+	show-icons:     true;
+}
+
+* {
+	background-color: #00000050;
+	text-color:       #EFEFEF;
+  font: "FiraCode Nerd Font 10";
+ 
+	line-margin:     0;
+	line-padding:    0;
+	separator-style: "none";
+	hide-scrollbar:  "true";
+	margin:          0;
+	padding:         0;
+}
+
+window {
+	width: 100ch;
+	border: 1px;
+	border-color: #EFEFEF50;
+  border-radius: 4px;
+	orientation: horizontal;
+	children:	 [mainbox];
+}
+
+mainbox {
+		children: [entry,listview,mode-switcher,message];
+    spacing: 0px;
+    padding: 0px;
+    border: 1px;
+    border-color: #EFEFEF50;
+}
+
+button {
+	padding: 8px 2px;
+}
+
+button selected {
+	background-color: #EFEFEF50;
+	text-color:       #EFEFEF;
+}
+
+inputbar {
+	padding: 5px;
+	spacing: 5px;
+}
+
+listview {
+		lines: 10;
+		fixed-height: 0;
+    border: 0px;
+    spacing: 0px;
+    scrollbar: false;
+    padding: 0px 5px 0px 5px;
+}
+
+element {
+	  background-color: #00000000;
+    border: 0;
+    border-radius: 0px;
+    padding: 3 0 3 4;
+}
+
+entry {
+	expand:         false;
+	text-color:     #EFEFEF;
+	vertical-align: 1;
+	padding:        8px;
+}
+
+element selected {
+	background-color: #EFEFEF50;
+	text-color:       #EFEFEF;
+}
+
+mode-switcher {
+	padding: 8 0 0 0;
+}
+
+textbox {
+  background-color: #EFEFEF50;
+  padding: 8px 0 8px 15%;
+}
+
+element-text {
+  background-color: #00000000;
+	padding: 0 0 0 0ch;
+}
