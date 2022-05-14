@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#rofi_command="wofi"
+rofi_command="rofi -theme themes/powermenu.rasi -i "
+
+#### Options ###
+power_off="襤 Shutdown"
+reboot="勒 Reboot"
+lock=" Lock Screen"
+suspend=" Suspend"
+hibernate="鈴 Hibernate"
+log_out="﫼 Log Out"
+
+# Variable passed to rofi
+options="$power_off\n$reboot\n$suspend\n$hibernate\n$log_out\n$lock"
+
+#chosen="$(echo -e "$options" | $rofi_command --height=280 --prompt "Power Menu" )"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -mesg "Power Menu" )"
+case $chosen in
+    $lock)
+        swaylock -i ~/.cache/wallpaper --effect-blur 10x5 --clock --indicator 
+        ;;    
+    $power_off)
+        systemctl poweroff
+        ;;
+    $reboot)
+        systemctl reboot
+        ;;
+    $suspend)
+        systemctl suspend
+        ;;
+    $hibernate)
+        systemctl hibernate
+        ;;
+    $log_out)
+        #swaymsg exit
+        loginctl terminate-session "${XDG_SESSION_ID-}"
+        ;;
+esac
