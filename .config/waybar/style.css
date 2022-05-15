@@ -16,18 +16,18 @@ window#waybar {
     transition-duration: .5s;
 }
 
+/*
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
 window#waybar.empty {
     background-color: transparent;
 }
 window#waybar.solo {
     background-color: #FFFFFF;
 }
-*/
+
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -37,6 +37,7 @@ window#waybar.chromium {
     background-color: #000000;
     border: none;
 }
+*/
 
 #workspaces button {
     padding: 0 5px;
