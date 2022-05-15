@@ -297,6 +297,13 @@ bindsym $mod+Control+Shift+Left move container to output left
 # Window rules
 for_window [app_id="mpv"] floating enable, resize set width 640 height 360, move position 1200 650, focus;
 
+focus_on_window_activation focus
+
+# Assign applications to specific workspaces
+assign [app_id="kitty"] 2
+for_window [app_id="kitty"] focus
+for_window [class=Spotify] move window to workspace 6
+
 #
 # Status Bar:
 #
