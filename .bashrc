@@ -40,7 +40,7 @@ HISTCONTROL=ignoreboth:erasedups
 export PROMPT_COMMAND="history -a; history -c; history -r $PROMPT_COMMAND"
 
 # If bpytop is installed then alias top to bpytop 
-[ -e /usr/bin/bpytop ] && alias top="/usr/bin/bpytop"
+[ -e /usr/bin/btop ] && alias top="/usr/bin/btop"
 alias ls='ls --color=auto -hv --group-directories-first'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
