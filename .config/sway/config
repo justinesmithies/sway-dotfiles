@@ -303,6 +303,8 @@ focus_on_window_activation focus
 assign [app_id="kitty"] 2
 for_window [app_id="kitty"] focus
 for_window [class=Spotify] move window to workspace 6
+assign [app_id="gimp-*"] 5
+for_window [app_id="gimp-*"] focus
 
 #
 # Status Bar:
